@@ -1,0 +1,1 @@
+練習localStorage用 - 農夫記事備忘錄
