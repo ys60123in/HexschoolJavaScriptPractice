@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opendata</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="title">高雄旅遊資訊</h1>
+            <select name="zones" id="zones">
+                <option value="--請選擇行政區--">--請選擇行政區--</option>
+            </select>
+            <div class="popularZone">
+                <h2>熱門行政區</h2>
+                <input type="button" value="苓雅區" class="btn btn-purple">
+                <input type="button" value="三民區" class="btn btn-orange">
+                <input type="button" value="新興區" class="btn btn-yellow">
+                <input type="button" value="前鎮區" class="btn btn-blue">
+            </div>
+        </div>
+        <div class="content">
+            <span class="splitter"></span>
+            <h2 id="zoneName">--請選擇行政區--</h2>
+            <ul class="list">
+
+            </ul>
+        </div>
+        <div class="footer">
+            <p>高雄旅遊網</p>
+            <p class="data-source">資料來源：高雄市政府</p>
+        </div>
+        <a href="#" class="go-top"><img src="images/btn_goTop.png" alt=""></a>
+    </div>
+
+    <script src="js/all.js"></script>
+</body>
+</html>
