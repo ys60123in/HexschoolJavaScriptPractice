@@ -1,0 +1,251 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*==================================================*/
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: PingFang TC, Helvetica, sans-serif;
+}
+
+.container{
+    width: 1024px;
+    margin: 0 auto;
+}
+
+.header{
+    background: #424242;
+    display: flex;
+    align-items: center;
+    height: 300px;
+    padding-left: 173px;
+}
+
+.body-data p{
+    font-size: 18px;
+    color: #FFD366;
+    margin: auto auto 7px 97px;
+}
+
+.input-text{
+    background: rgba(255,255,255,0.18);
+    border: 2px solid #FFD366;
+    border-radius: 10px;
+    font-size: 24px;
+    line-height: 36px;
+    width: 250px;
+    margin: auto 53px 23px 97px;
+    color: rgba(255,255,255,0.50);
+    outline: 0px;
+    padding: 0 16px;
+}
+
+.result{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.btn{
+    width: 132px;
+    height: 132px;
+    background: #FFD366;
+    font-size: 24px;
+    color: #424242;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 6px solid transparent;
+    outline: 0px;
+    margin-right: 18px;
+}
+
+.btn:hover{
+    background: #FFD366;
+    box-shadow: 0 1px 6px 3px rgba(255,196,50,0.64);
+}
+
+.btn:active{
+    background: #DEA821;
+}
+
+.result .label-BMI{
+    display: none;
+    font-size: 14px;
+    position: absolute;
+    left: 55px;
+    bottom: 35px;
+}
+
+.result .result-level{
+    display: block;
+    font-size: 32px;
+}
+
+.refresh{
+    display: none;
+    background-image: url(../images/icons_loop.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 3px solid #424242;
+    outline: 0px;
+    position: absolute;
+    bottom: 10px;
+    left: 93px;
+    cursor: pointer;
+}
+
+.content{
+    text-align: center;
+    padding: 48px 0 32px;
+    background: #F5F5F5;
+}
+
+.content h2{
+    font-size: 24px;
+    color: #424242;
+    margin-bottom: 36px;
+}
+
+.list{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.list li{
+    width: 624px;
+    height: 62px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    border-left: 7px solid transparent;
+    position: relative;
+    background: #ffffff;
+}
+
+.list p{
+    font-size: 20px;
+    color: #4A4A4A;
+}
+
+.list .desc{
+    font-size: 12px;
+    color: #424242;
+    margin-right: 7px;
+    line-height: 22px;
+    vertical-align: text-top;
+}
+
+.list .under-weight{
+    border-left: 7px solid #31BAF9;;
+}
+
+.list .healthy-weight{
+    border-left: 7px solid #86D73F;
+}
+
+.list .over-weight{
+    border-left: 7px solid #FF982D;
+}
+
+.list .obese-class1{
+    border-left: 7px solid #FF6C03;
+}
+
+.list .obese-class2{
+    border-left: 7px solid #FF6C03;
+}
+
+.list .obese-class3{
+    border-left: 7px solid #FF1200;
+}
+
+.item-level{
+    position: absolute;
+    left: 12px;
+}
+
+.item-BMI{
+    position: absolute;
+    left: 122px;
+}
+
+.item-weight{
+    position: absolute;
+    left: 245px;
+}
+
+.item-height{
+    position: absolute;
+    left: 379px;
+}
+
+.item-date{
+    position: absolute;
+    left: 538px;
+}
+
+.footer{
+    background: #FFD366;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer img{
+    display: block;
+    width: 55px;
+    height: 55px;
+    filter: brightness(0);
+}
