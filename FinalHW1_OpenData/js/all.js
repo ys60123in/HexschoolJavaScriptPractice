@@ -83,20 +83,20 @@ function stringListItem(name, zone, openTime, add, tel, ticketInfo, picture1){
     }
     
     str = 
-    '<li>' +
-        '<div class="photo" style="background: url(' + picture1 + ');background-size: cover;background-position: center;">' +
-            '<h3>' + name + '</h3>' + 
-            '<p>' + zone + '</p>' +
-        '</div>' + 
-        '<div class="description">' +
-            '<p><img src="images/icons_clock.png" alt="">' + openTime + '</p>' +
-            '<p><img src="images/icons_pin.png" alt="">' + add + '</p>' +
-            '<div class="side-by-side">' +
-                '<p><img src="images/icons_phone.png" alt="">' + tel + '</p>' +
-                '<p><img src="images/icons_tag.png" alt="">' + ticketInfo + '</p>' +
-            '</div>' + 
-        '</div>' +
-    '</li>';
+    `<li>
+        <div class="photo" style="background: url(${picture1});background-size: cover;background-position: center;">
+            <h3>${name}</h3>
+            <p>${zone}</p>
+        </div>
+        <div class="description">
+            <p><img src="images/icons_clock.png" alt="">${openTime}</p>
+            <p><img src="images/icons_pin.png" alt="">${add}</p>
+            <div class="side-by-side">
+                <p><img src="images/icons_phone.png" alt="">${tel}</p>
+                <p><img src="images/icons_tag.png" alt="">${ticketInfo}</p>
+            </div>
+        </div>
+    </li>`;
 
     return str;
 }

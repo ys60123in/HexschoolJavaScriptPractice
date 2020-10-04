@@ -150,13 +150,13 @@ function updateHistory(){
     let str = '';
     for (let i = 0; i < historyArray.length; i++) {
         str += 
-        '<li class="'+ historyArray[i].LevelStyle +'">' +
-            '<p class="item-level">' + historyArray[i].Level + '</p>' +
-            '<p class="item-BMI"><span class="desc">BMI</span>' + historyArray[i].BMI + '</p>' +
-            '<p class="item-weight"><span class="desc">weight</span>' + historyArray[i].Weight + 'kg</p>' +
-            '<p class="item-height"><span class="desc">height</span>' + historyArray[i].Height + 'cm</p>' +
-            '<p class="item-date desc">' + historyArray[i].Date + '</p>' +
-        '</li>';
+        `<li class="${historyArray[i].LevelStyle}">
+            <p class="item-level">${historyArray[i].Level}</p>
+            <p class="item-BMI"><span class="desc">BMI</span>${historyArray[i].BMI}</p>
+            <p class="item-weight"><span class="desc">weight</span>${historyArray[i].Weight}kg</p>
+            <p class="item-height"><span class="desc">height</span>${historyArray[i].Height}cm</p>
+            <p class="item-date desc">${historyArray[i].Date}</p>
+        </li>`;
     }
     list.innerHTML = str;
 }
