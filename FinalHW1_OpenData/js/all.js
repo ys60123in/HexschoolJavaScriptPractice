@@ -1,6 +1,6 @@
 //Data
-var data;
-var xhr = new XMLHttpRequest();
+let data;
+let xhr = new XMLHttpRequest();
 xhr.open('get', 'js/openData.json', true);
 xhr.send(null);
 xhr.onload = function(){
@@ -10,9 +10,9 @@ xhr.onload = function(){
 };
 
 //Parameter
-var zones = [];
-var selectZones = document.getElementById('zones');
-var popularZone = document.querySelector('.popularZone');
+let zones = [];
+let selectZones = document.getElementById('zones');
+let popularZone = document.querySelector('.popularZone');
 
 //Event
 selectZones.addEventListener('change', zonesChange, false);

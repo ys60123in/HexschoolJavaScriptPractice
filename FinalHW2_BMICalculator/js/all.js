@@ -1,7 +1,7 @@
 //Parameter
-var resultBtn = document.getElementById('btnResult');
-var refreshBtn = document.querySelector('.refresh');
-var historyArray = JSON.parse(localStorage.getItem('historyArray')) || [];
+let resultBtn = document.getElementById('btnResult');
+let refreshBtn = document.querySelector('.refresh');
+let historyArray = JSON.parse(localStorage.getItem('historyArray')) || [];
 
 updateHistory();
 
