@@ -29,7 +29,7 @@ btnSend.addEventListener('click', function(){
 
     if(jsonToDoList !== null)
     {
-        toDoLists = JSON.parse(jsonToDoList);
+        toDoList = JSON.parse(jsonToDoList);
     }
     toDoList.push(item);
     localStorage.setItem('toDoList', JSON.stringify(toDoList));
