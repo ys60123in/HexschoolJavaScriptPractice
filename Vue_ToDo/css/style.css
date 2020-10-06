@@ -1,0 +1,156 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*-------------------------------------------------------*/
+html {
+    background: url('https://firebasestorage.googleapis.com/v0/b/hexschool-api.appspot.com/o/web%2Fdemo%2Fjavascript%2Fphoto-1469122312224-c5846569feb1.jpeg?alt=media&token=7ff9d611-d759-4349-91c7-d1dc9a03692d') center no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.wrap{
+    width: 700px;
+    margin: 0 auto;
+    background: #fff;
+    margin:  100px auto;
+    padding: 1em;
+    text-align: center;
+}
+
+.img{
+    float: left;
+    width: 200px;
+}
+
+.content{
+    float: right;
+    width: 450px;
+    text-align: left;
+}
+
+.clearfix{
+    overflow: auto;
+    zoom: 1;
+}
+
+.list {
+    margin: 0;
+    padding: 5px;
+    text-align: left;
+    list-style: none;
+}
+
+.list li {
+    border-bottom: 1px solid gray;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.addList {
+    margin: 20px auto;
+}
+
+.addList .text {
+    padding: 10px;
+    border: 2px solid rgb(73, 41, 10);
+}
+
+.addList .send {
+    padding: 10px;
+    cursor: pointer;
+    background: #e8a874;
+}
+
+.addList .remove {
+    padding: 10px;
+    cursor: pointer;
+    background: rgb(228, 125, 125);
+}
+
+.addList .filters{
+    margin-top: 20px;
+    display: flex;
+    border-radius: 18px;
+    border: 1px solid black;
+    width: 370px;
+    justify-content: space-between;
+}
+
+.addList .filters li{
+    border: 1px solid transparent;
+    border-radius: 17px;
+    background: white;
+}
+
+.addList .filters li:hover{
+    background: rgb(240, 197, 157);
+}
+
+.addList .filters .selected{
+    background: rgb(240, 197, 157);
+}
+
+.addList .filters a{
+    display: block;
+    padding: 8px 20px;
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+}
+
+.btn-delete{
+    width: 16px;
+    height: 16px;
+}
+
+.completed{
+    text-decoration: line-through;
+    color: silver;
+}

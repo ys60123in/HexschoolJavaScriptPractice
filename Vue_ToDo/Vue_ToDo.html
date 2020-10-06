@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="wrap clearfix" id="app">
+        <div class="img">
+            <img class="logo" src="https://upload.cc/i1/2020/09/29/QuICF2.png">
+        </div>
+        <div class="content">
+           <div class="addList">
+             <input type="text" class="text" placeholder="請填寫代辦內容" required v-model="toDoText" @keyup.enter="send(toDoText)">
+             <input type="button" class="send" value="送出" @click="send(toDoText)">
+             <input type="button" class="send" value="全部完成" @click="completeAll()">
+             <input type="button" class="remove" value="刪除已完成" @click="removeCompleted()">
+             <ul class="filters">
+                <li v-bind:class="{ selected: visibility == 'all' }">
+                  <a href="#" @click.prevent="showMode('all')">顯示全部</a>
+                </li>
+                <li v-bind:class="{ selected: visibility == 'active' }">
+                  <a href="#" @click.prevent="showMode('active')">顯示未完成</a>
+                </li>
+                <li v-bind:class="{ selected: visibility == 'completed' }">
+                  <a href="#" @click.prevent="showMode('completed')">顯示已完成</a>
+                </li>
+             </ul>
+           </div>
+           <ul class="list" v-for="todo in filteredToDoList">
+                <li>
+                    <div>
+                        <input type="checkbox" v-model="todo.completed">
+                        <p v-bind:class="{completed: todo.completed}" style="display: inline-block;">{{todo.listItem}}</p>
+                    </div>
+                    <a href="#" @click.prevent="removeTodo(todo)"><img class="btn-delete" src="https://image.flaticon.com/icons/png/512/484/484662.png" alt=""></a>
+                </li>
+           </ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/all.js"></script>
+</body>
+</html>
