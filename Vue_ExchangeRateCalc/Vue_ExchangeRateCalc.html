@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="app">
+      輸入台幣： <input type="text" v-model="NT">
+      <ul>
+        <li>日幣:{{JPY}}</li>
+        <li>美金:{{USD}}</li>
+        <li>人民幣:{{CNY}}</li>
+        <li>港幣:{{HKD}}</li>
+        <li>澳幣:{{AUD}}</li>
+      </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/all.js"></script>
+</body>
+</html>
