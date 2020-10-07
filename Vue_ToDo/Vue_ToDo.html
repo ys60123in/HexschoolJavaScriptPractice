@@ -29,7 +29,7 @@
                 </li>
              </ul>
            </div>
-           <ul class="list" v-for="todo in filteredToDoList">
+           <ul class="list" v-for="todo in filteredToDoList" :key="todo.id">
                 <li>
                     <div>
                         <input type="checkbox" v-model="todo.completed">

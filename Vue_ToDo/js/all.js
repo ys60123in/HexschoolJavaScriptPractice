@@ -28,7 +28,7 @@ var app = new Vue({
                 alert('請先輸入代辦事項!');
                 return;
             }
-            this.toDoList.push({listItem: todo, completed: false });
+            this.toDoList.push({listItem: todo, id: Math.floor(Date.now()), completed: false });
             localStorage.setItem('toDoList', JSON.stringify(this.toDoList));
             this.toDoText = '';
         },
