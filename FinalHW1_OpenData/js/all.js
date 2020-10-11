@@ -1,7 +1,7 @@
 //Data
 let data;
 let xhr = new XMLHttpRequest();
-xhr.open('get', 'js/openData.json', true);
+xhr.open('get', 'https://raw.githubusercontent.com/hexschool/KCGTravel/master/datastore_search.json', true);
 xhr.send(null);
 xhr.onload = function(){
     data = JSON.parse(xhr.responseText).result.records;
@@ -23,14 +23,14 @@ window.addEventListener('resize', goTopBtnPosition, false);
 //Function
 function initSelect(){
     for (let i = 0; i < data.length; i++) {
-        if(zones.find(x => x == data[i].Zone) === undefined)
+        if(zones.find(x => x === data[i].Zone) === undefined)
         {
             zones.push(data[i].Zone);
         }
     }
 
     for (let i = 0; i < zones.length; i++) {
-        selectZones.innerHTML += '<option value=' + zones[i] + '>' + zones[i] + '</option>';
+        selectZones.innerHTML += `<option value=${zones[i]}>${zones[i]}</option>`;
     }
 }
 
@@ -39,10 +39,10 @@ function zonesChange(e){
 }
 
 function popularZoneClick(e){
-    if(e.target.nodeName == 'INPUT')
+    if(e.target.nodeName === 'INPUT')
     {
         for (let i = 0; i < selectZones.options.length; i++){  
-            if (selectZones.options[i].value == e.target.value)
+            if (selectZones.options[i].value === e.target.value)
             {  
                 selectZones.options[i].selected = true;
                 updateContent(e.target.value);
@@ -53,18 +53,24 @@ function popularZoneClick(e){
 }
 
 function updateContent(zone){
+    let defaultZone_Option = document.getElementById('defaultZone');
+    if(zone !== '--請選擇行政區--' && defaultZone_Option.getAttribute('disabled') !== 'disabled')
+    {
+        defaultZone_Option.setAttribute('disabled', 'disabled');
+    }
+
     let str = '';
     let list = document.querySelector('.list');
     let zoneName = document.getElementById('zoneName');
 
     for (let i = 0; i < data.length; i++) {
-        if(zone == '--請選擇行政區--')
+        if(zone === '--請選擇行政區--')
         {
             str += stringListItem(data[i].Name, data[i].Zone, data[i].Opentime, data[i].Add, data[i].Tel, data[i].Ticketinfo, data[i].Picture1);
         }
         else
         {
-            if(zone == data[i].Zone)
+            if(zone === data[i].Zone)
             {
                 str += stringListItem(data[i].Name, data[i].Zone, data[i].Opentime, data[i].Add, data[i].Tel, data[i].Ticketinfo, data[i].Picture1);
             }
@@ -76,12 +82,6 @@ function updateContent(zone){
 
 function stringListItem(name, zone, openTime, add, tel, ticketInfo, picture1){
     let str = '';
-
-    if(ticketInfo == '')
-    {
-        ticketInfo = "　　　　";
-    }
-    
     str = 
     `<li>
         <div class="photo" style="background: url(${picture1});background-size: cover;background-position: center;">
@@ -101,7 +101,7 @@ function stringListItem(name, zone, openTime, add, tel, ticketInfo, picture1){
     return str;
 }
 
-function goTopBtnPosition(){
+function goTopBtnPosition(e){
     let container = document.querySelector('.container');
     let goTopBtn = document.querySelector('.go-top');
 
