@@ -71,7 +71,14 @@ body{
 .body-data p{
     font-size: 18px;
     color: #FFD366;
-    margin: auto auto 7px 97px;
+    margin: 15px auto 7px 97px;
+}
+
+.body-data .prompt{
+    display: block;
+    font-size: 15px;
+    color: rgb(245, 97, 97);
+    margin-left: 97px;
 }
 
 .input-text{
@@ -81,7 +88,7 @@ body{
     font-size: 24px;
     line-height: 36px;
     width: 250px;
-    margin: auto 53px 23px 97px;
+    margin: auto 53px 5px 97px;
     color: rgba(255,255,255,0.50);
     outline: 0px;
     padding: 0 16px;
@@ -163,7 +170,7 @@ body{
 }
 
 .list li{
-    width: 624px;
+    width: 670px;
     height: 62px;
     margin-bottom: 16px;
     display: flex;
@@ -233,6 +240,16 @@ body{
 .item-date{
     position: absolute;
     left: 538px;
+}
+
+.item-remove{
+    position: absolute;
+    left: 632px;
+}
+
+.btn-remove{
+    width: 20px;
+    height: 20px;
 }
 
 .footer{
