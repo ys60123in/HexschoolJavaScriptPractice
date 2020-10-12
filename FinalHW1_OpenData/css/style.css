@@ -198,6 +198,32 @@ body{
     justify-content: space-between;
 }
 
+.pages{
+    display: flex;
+    margin: 40px auto;
+}
+
+.pages a{
+    padding: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: none;
+    color: #4A4A4A;
+}
+
+.pages a:hover{
+    color: #559AC8;
+}
+
+.pages a.page-selected{
+    color: #559AC8;
+}
+
+.pages a.page-disabled{
+    pointer-events: none;
+    color: silver;
+}
+
 .footer{
     background: #559AC8;
     text-align: center;
