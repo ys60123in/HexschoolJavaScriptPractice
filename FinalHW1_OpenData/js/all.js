@@ -75,7 +75,7 @@ function updateContent(zone, page){
     }
 }
 
-function goTopBtnPosition(e){
+function goTopBtnPosition(){
     const container = document.querySelector('.container');
     const goTopBtn = document.querySelector('.go-top');
 
